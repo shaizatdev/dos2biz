@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <title>Байланыс | Bayan Financial Services Limited</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Bayan Financial Services байланысы">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--primary:#0071e3;--text:#1d1d1f;--grey:#6e6e73;--bg:#fbfbfd}
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',-apple-system,BlinkMacSystemFont,'Helvetica Neue','PingFang SC','Microsoft YaHei',sans-serif;color:var(--text)}
+    body{background:var(--bg);line-height:1.6}
+    header{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.72);backdrop-filter:blur(12px);border-bottom:1px solid rgba(0,0,0,.08);z-index:999}
+    .nav{display:flex;align-items:center;justify-content:space-between;max-width:980px;margin:0 auto;padding:0 22px;height:52px}
+    .logo{font-weight:700;font-size:18px;letter-spacing:-.4px}
+    .lang-switch select{background:transparent;border:0;font-size:14px;outline:0;cursor:pointer;color:var(--text)}
+    main{padding-top:52px}
+    .section{max-width:980px;margin:0 auto;padding:100px 22px}
+    h2{font-size:48px;font-weight:700;letter-spacing:-.5px;margin-bottom:24px}
+    .info{font-size:19px;color:var(--grey)}
+    .info p{margin-bottom:12px}
+    footer{text-align:center;padding:48px 22px;font-size:14px;color:var(--grey)}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <a href="index.html" class="logo">Bayan Financial</a>
+      <div class="lang-switch">
+        <select onchange="location.href=event.target.value">
+          <option value="../zh/index.html">中文</option>
+          <option value="../en/index.html">English</option>
+          <option value="index.html" selected>Қазақша</option>
+          <option value="../ru/index.html">Русский</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <h2>Байланыс</h2>
+      <div class="info">
+        <p><strong>Мекенжай</strong>: Астана қаласы, Оңтүстік тас жолы 1, Баян Тауэр 88-қабат</p>
+        <p><strong>Телефон</strong>: (+7) 88888888</p>
+        <p><strong>Электрондық пошта</strong>: info@bayan.kz</p>
+        <p>Жұмыс уақыты: Дс–жм 09:00–18:00 (UTC+6)</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2025 Bayan Financial Services Limited · Барлық құқықтар қорғалған</footer>
+</body>
+</html>

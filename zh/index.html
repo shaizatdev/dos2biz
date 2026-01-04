@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>首页 | Bayan财务服务有限公司</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Bayan财务——专注中亚市场的多语言财务服务">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+  <style>
+    :root{--primary:#0071e3;--text:#1d1d1f;--grey:#6e6e73;--bg:#fbfbfd;--radius:18px}
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',-apple-system,BlinkMacSystemFont,'Helvetica Neue','PingFang SC','Microsoft YaHei',sans-serif;color:var(--text)}
+    body{background:var(--bg);line-height:1.6}
+    a{text-decoration:none}
+    img{max-width:100%;display:block}
+    header{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.72);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(0,0,0,.08);z-index:999}
+    .nav{display:flex;align-items:center;justify-content:space-between;max-width:980px;margin:0 auto;padding:0 22px;height:52px}
+    .logo{font-weight:700;font-size:18px;letter-spacing:-.4px}
+    .lang-switch select{background:transparent;border:0;font-size:14px;outline:0;cursor:pointer;color:var(--text)}
+    main{padding-top:52px}
+    .hero{display:flex;flex-direction:column;align-items:center;text-align:center;padding:100px 22px 80px;background:#fff}
+    .hero h1{font-size:56px;font-weight:700;letter-spacing:-.5px;margin-bottom:16px}
+    .hero p{font-size:21px;color:var(--grey);max-width:640px;margin-bottom:32px}
+    .btn-primary{display:inline-block;background:var(--primary);color:#fff;padding:12px 24px;border-radius:var(--radius);font-size:17px;font-weight:600}
+    .btn-primary:hover{opacity:.92}
+    .section{max-width:980px;margin:0 auto;padding:100px 22px}
+    .grid{display:grid;gap:32px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+    .card{background:#fff;border-radius:var(--radius);padding:40px 24px;text-align:center;box-shadow:0 4px 24px rgba(0,0,0,.06)}
+    .card i{font-size:48px;color:var(--primary);margin-bottom:16px}
+    .card h3{font-size:24px;margin-bottom:12px}
+    .card p{font-size:17px;color:var(--grey)}
+    footer{text-align:center;padding:48px 22px;font-size:14px;color:var(--grey)}
+    @media(max-width:736px){.hero h1{font-size:40px}.hero p{font-size:19px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <a href="index.html" class="logo">Bayan财务服务</a>
+      <div class="lang-switch">
+        <select onchange="location.href=event.target.value">
+          <option value="index.html" selected>中文</option>
+          <option value="../en/index.html">English</option>
+          <option value="../kk/index.html">Қазақша</option>
+          <option value="../ru/index.html">Русский</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>专业财务，放眼中亚</h1>
+      <p>Bayan 财务服务有限公司为哈萨克斯坦及周边地区企业提供会计、审计、税务一站式解决方案。</p>
+      <a href="services.html" class="btn-primary">了解服务</a>
+    </section>
+
+    <section class="section">
+      <div class="grid">
+        <div class="card">
+          <i class="icon ion-ios-calculator"></i>
+          <h3>会计外包</h3>
+          <p>全套账务处理、报表编制，符合哈萨克国际财务准则。</p>
+        </div>
+        <div class="card">
+          <i class="icon ion-ios-search"></i>
+          <h3>审计鉴证</h3>
+          <p>独立审计、内部控制评估，助力企业融资与上市。</p>
+        </div>
+        <div class="card">
+          <i class="icon ion-ios-paper-plane"></i>
+          <h3>税务咨询</h3>
+          <p>合理筹划、合规申报，降低税负与法律风险。</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2025 Bayan财务服务有限公司 · 所有权利保留</footer>
+</body>
+</html>
