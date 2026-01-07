@@ -5,23 +5,37 @@
   <title>Bayan财务服务有限公司</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    body{font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue","PingFang SC",sans-serif;background:#fbfbfd;text-align:center;padding:15vh 20px}
+    body{font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue","PingFang SC",sans-serif;background:#fbfbfd;text-align:center;padding:15vh 20px;animation:fadeIn 0.3s ease-out}
     h1{font-size:48px;font-weight:700;margin-bottom:16px;color:#1d1d1f}
     p{font-size:21px;color:#6e6e73;margin-bottom:40px}
     .btn{display:inline-block;background:#0071e3;color:#fff;padding:12px 28px;border-radius:18px;font-size:17px;font-weight:600;text-decoration:none}
+    @keyframes fadeIn{from{opacity:0}to{opacity:1}}
   </style>
-  <!-- 首次进入自动跳转用户手机语言 -->
+  <!-- 3秒倒计时+淡入跳转 -->
   <script>
     (function(){
-      const map={zh:'zh/index.html',en:'en/index.html',kk:'kk/index.html',ru:'ru/index.html'};
-      const lang=(navigator.language||navigator.userLanguage).split('-')[0];
-      if(map[lang]) location.replace(map[lang]);
+      const map={zh:'zh',en:'en',kk:'kk',ru:'ru'};
+      const base=(navigator.language||'').split('-')[0];
+      const msg=document.getElementById('msg');
+      const sub=document.getElementById('sub');
+      if(map[base]){
+        let sec=3;
+        const tick=()=>{
+          msg.textContent=`正在跳转至 ${map[base].toUpperCase()}… ${sec}`;
+          if(--sec<0) location.replace(map[base]+'/index.html');
+          else setTimeout(tick,1000);
+        };
+        tick();
+      }else{
+        msg.textContent='请选择语言';
+        sub.textContent='若未自动跳转，请手动选择：';
+      }
     })();
   </script>
 </head>
 <body>
-  <h1>正在跳转…</h1>
-  <p>若未自动跳转，请手动选择语言：</p>
+  <h1 id="msg">正在跳转…</h1>
+  <p id="sub">若未自动跳转，请手动选择：</p>
   <div>
     <a class="btn" href="zh/index.html">中文</a>
     <a class="btn" href="en/index.html">English</a>
