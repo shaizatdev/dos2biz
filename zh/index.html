@@ -29,6 +29,8 @@
     .card i{font-size:48px;color:var(--primary);margin-bottom:16px}
     .card h3{font-size:24px;margin-bottom:12px}
     .card p{font-size:17px;color:var(--grey)}
+    .contact-info{font-size:19px;color:var(--grey);margin-top:24px}
+    .contact-info p{margin-bottom:12px}
     footer{text-align:center;padding:48px 22px;font-size:14px;color:var(--grey)}
     @media(max-width:736px){.hero h1{font-size:40px}.hero p{font-size:19px}}
   </style>
@@ -39,7 +41,7 @@
       <a href="index.html" class="logo">Bayan财务服务</a>
       <div class="lang-switch">
         <select onchange="location.href=event.target.value">
-          <option value="index.html" selected>中文</option>
+          <option value="../index.html">中文</option>
           <option value="../en/index.html">English</option>
           <option value="../kk/index.html">Қазақша</option>
           <option value="../ru/index.html">Русский</option>
@@ -52,10 +54,11 @@
     <section class="hero">
       <h1>专业财务，放眼中亚</h1>
       <p>Bayan 财务服务有限公司为哈萨克斯坦及周边地区企业提供会计、审计、税务一站式解决方案。</p>
-      <a href="services.html" class="btn-primary">了解服务</a>
+      <a href="#services" class="btn-primary">了解服务</a>
     </section>
 
-    <section class="section">
+    <section id="services" class="section">
+      <h2>我们的服务</h2>
       <div class="grid">
         <div class="card">
           <i class="icon ion-ios-calculator"></i>
@@ -72,6 +75,19 @@
           <h3>税务咨询</h3>
           <p>合理筹划、合规申报，降低税负与法律风险。</p>
         </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>联系我们</h2>
+      <div class="contact-info">
+        <p><strong>地址</strong>：阿斯塔纳市解放路1号 Bayan 大厦88层</p>
+        <p><strong>电话</strong>：（+7）88888888</p>
+        <p><strong>电子邮件</strong>：info@bayan.kz</p>
+        <p>工作时间：周一至周五 09:00–18:00 (UTC+6)</p>
+      </div>
+      <div style="text-align:center;margin-top:24px">
+        <a href="contact.html" class="btn-primary">查看详细联系方式</a>
       </div>
     </section>
   </main>
